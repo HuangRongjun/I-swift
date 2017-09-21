@@ -4,15 +4,19 @@ import UIKit
 
 var str = "Hello, playground"
 
-var a = 2;
-var b = 3;
-var result = a * b;
+var a = 5
+var b = 6
+let sum = a + b
+let sub = a - b 
+let mul = a * b
+let div = a / b 
+let mod = a % b
 
-var sum = 0;
+var result = 0;
 for i in 0...100{
-    sum += i;
+    result += i;
 }
-print(sum);
+print(result);
 
 let PI = 3.1455926;
 var pi = 3.14e-2
