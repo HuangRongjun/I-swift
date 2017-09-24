@@ -80,7 +80,7 @@ fiveInts.forEach(){
 
 // Array modification
 array1.append(1)
-array1 += [2, 3, 4]
+array1 += [2, 3, 5, 6, 3, 2]
 
 array1.insert(0, at: array1.startIndex)
 array1.insert(5, at: array1.endIndex)
