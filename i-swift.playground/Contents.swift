@@ -100,6 +100,7 @@ func getBufferAddress<T>(array: [T]) -> String {
     }
 }
 
+// 值引用类型指向不同的内存地址
 getBufferAddress(array: arrA)
 getBufferAddress(array: copyArrA)
 arrA.append(4)
@@ -108,7 +109,7 @@ getBufferAddress(array: copyArrA)
 
 // Mutable array [1, 2, 3]
 let arrB = NSMutableArray(array: [1, 2, 3])
-// 值引用类型指向同一个内存地址
+// 对象引用类型指向同一个内存地址
 let copyArrB = arrB
 let deepCopyArrB = arrB.copy() as! NSArray
 
