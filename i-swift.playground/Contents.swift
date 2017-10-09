@@ -49,6 +49,8 @@ type(of: oneThridDouble)
 var array1: Array<Int> = Array<Int>()
 var array2: [Int] = []
 var array3 = array2
+array2.first
+type(of: array2.last)
 
 // Initialization with values
 var threeInts = [Int](repeating:3, count: 3)
@@ -81,6 +83,18 @@ fiveInts.forEach(){
 // Array modification
 array1.append(1)
 array1 += [2, 3, 5, 6, 3, 2]
+
+array1.forEach(){
+    print($0)
+}
+
+for(index, value) in array1.enumerated(){
+    print(index, value)
+}
+
+print(array1.filter{ $0 % 2 == 0 })
+
+type(of: array1.popLast())
 
 array1.insert(0, at: array1.startIndex)
 array1.insert(5, at: array1.endIndex)
