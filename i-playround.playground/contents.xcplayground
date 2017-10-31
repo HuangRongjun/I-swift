@@ -3,10 +3,14 @@
     <pages>
         <page name='chap01'/>
         <page name='chap02'/>
+        <page name='chap03'/>
         <page name='chap06_Loops'/>
         <page name='chap07_Strings'/>
         <page name='chap08_Optionals'/>
         <page name='chap09_Array'/>
-        <page name='chap03'/>
+        <page name='chap10_Dictionary'/>
+        <page name='chap11_Groceries'/>
+        <page name='chap12_Functions'/>
+        <page name='chap13_Closures'/>
     </pages>
 </playground>
