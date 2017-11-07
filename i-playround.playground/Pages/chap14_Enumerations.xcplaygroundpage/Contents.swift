@@ -97,11 +97,7 @@ enum ShapeDimensions {
     case triangle(sideA: Double, sideB: Double, sideC: Double)
     
     func isUsefulTriangle(_ a: Double, _ b: Double, _ c: Double) -> Bool{
-        if a + b > c, a + c > b, b + c > a {
-            return true
-        } else {
-            return false
-        }
+        return a + b > c && a + c > b && b + c > a
     }
     
     func area() -> Double {
