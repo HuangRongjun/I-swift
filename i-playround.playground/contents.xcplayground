@@ -12,5 +12,6 @@
         <page name='chap11_Groceries'/>
         <page name='chap12_Functions'/>
         <page name='chap13_Closures'/>
+        <page name='chap14_Enumerations'/>
     </pages>
 </playground>
