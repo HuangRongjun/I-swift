@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='macos'>
     <pages>
-        <page name='chap01'/>
-        <page name='chap02'/>
-        <page name='chap03'/>
+        <page name='chap01_Start'/>
+        <page name='chap02_Variables'/>
+        <page name='chap03_Conditionals'/>
         <page name='chap04_Numbers'/>
+        <page name='chap05_Switch'/>
         <page name='chap06_Loops'/>
         <page name='chap07_Strings'/>
         <page name='chap08_Optionals'/>
