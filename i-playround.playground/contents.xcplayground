@@ -4,6 +4,7 @@
         <page name='chap01'/>
         <page name='chap02'/>
         <page name='chap03'/>
+        <page name='chap04_Numbers'/>
         <page name='chap06_Loops'/>
         <page name='chap07_Strings'/>
         <page name='chap08_Optionals'/>
