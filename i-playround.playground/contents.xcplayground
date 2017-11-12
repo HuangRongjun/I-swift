@@ -15,5 +15,6 @@
         <page name='chap12_Functions'/>
         <page name='chap13_Closures'/>
         <page name='chap14_Enumerations'/>
+        <page name='chap15_Mutating'/>
     </pages>
 </playground>
