@@ -9,15 +9,26 @@
 import Foundation
 
 class Zombie: Monster {
-    var walkWithLimp = true
-    
+    var walkWithLimp      = true
+    var zombieTerrorPower = 10
     final override func terrorizeTown() {
-        let subPopulation = 10
-        if let population = town?.population, population > subPopulation {
-            town?.changePopulation(by: -subPopulation)
-        } else {
-            town?.population = 0
+        town?.isMonsterAttacking = true
+        
+        if let currentPopulation = town?.population {
+            switch currentPopulation {
+
+            case 0:
+                print("\(self.name) tried terrorizing but everyone was dead... nobody left to terrorize.")
+
+            case 1...zombieTerrorPower:
+                town?.population = 0
+                print("\(self.name) terrorized the town, and now everyone is dead.")
+
+            default:
+                super.terrorizeTown()
+                town?.changePopulation(by: zombieTerrorPower)
+            }
         }
-        super.terrorizeTown()
+        town?.isMonsterAttacking = false
     }
 }

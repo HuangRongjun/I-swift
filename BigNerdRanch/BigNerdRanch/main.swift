@@ -11,15 +11,26 @@ import Foundation
 // Struct
 var myTown = Town()
 myTown.changePopulation(by: 500)
-//myTown.printDescription()
+myTown.printDescription()
 
 // Class
 //let genericMonster = Monster()
 //genericMonster.town = myTown
 //genericMonster.terrorizeTown()
 
+// Vampire
+let dracula  = Vampire()
+dracula.name = "Dracula"
+dracula.town = myTown
+dracula.terrorizeTown()
+dracula.terrorizeTown()
+dracula.terrorizeTown()
+dracula.town?.printDescription()
+
 // Zombie
-let fredTheZombie = Zombie()
+let fredTheZombie  = Zombie()
 fredTheZombie.town = myTown
+fredTheZombie.name = "Zombie"
+fredTheZombie.zombieTerrorPower = 1000
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
