@@ -1,3 +1,3 @@
-# i-playground
+# i-swift
 
 Swift learning
