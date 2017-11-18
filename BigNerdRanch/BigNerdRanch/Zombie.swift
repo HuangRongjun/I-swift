@@ -15,11 +15,12 @@ class Zombie: Monster {
     var walkWithLimp                = true
     private(set) var isFallingApart = false
     
+    var mayor = Mayor()
     var zombieTerrorPower = 10
     final override func terrorizeTown() {
         if !isFallingApart {
             town?.isMonsterAttacking = true
-            
+
             if let currentPopulation = town?.population {
                 switch currentPopulation {
 
@@ -33,6 +34,7 @@ class Zombie: Monster {
                 default:
                     super.terrorizeTown()
                     town?.changePopulation(by: zombieTerrorPower)
+                    mayor.anxious()
                 }
             }
             town?.isMonsterAttacking = false

@@ -36,6 +36,9 @@ fredTheZombie.town = myTown
 fredTheZombie.name = "Zombie"
 fredTheZombie.zombieTerrorPower = 1000
 fredTheZombie.terrorizeTown()
+fredTheZombie.terrorizeTown()
+fredTheZombie.terrorizeTown()
+fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
 
 print("Victim pool: \(fredTheZombie.victimPool)")
