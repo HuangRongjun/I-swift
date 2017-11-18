@@ -9,26 +9,33 @@
 import Foundation
 
 class Zombie: Monster {
-    var walkWithLimp      = true
+   override class var spookyNoise: String {
+        return "Brains..."
+    }
+    var walkWithLimp                = true
+    private(set) var isFallingApart = false
+    
     var zombieTerrorPower = 10
     final override func terrorizeTown() {
-        town?.isMonsterAttacking = true
-        
-        if let currentPopulation = town?.population {
-            switch currentPopulation {
+        if !isFallingApart {
+            town?.isMonsterAttacking = true
+            
+            if let currentPopulation = town?.population {
+                switch currentPopulation {
 
-            case 0:
-                print("\(self.name) tried terrorizing but everyone was dead... nobody left to terrorize.")
+                case 0:
+                    print("\(self.name) tried terrorizing but everyone was dead... nobody left to terrorize.")
 
-            case 1...zombieTerrorPower:
-                town?.population = 0
-                print("\(self.name) terrorized the town, and now everyone is dead.")
+                case 1...zombieTerrorPower:
+                    town?.population = 0
+                    print("\(self.name) terrorized the town, and now everyone is dead.")
 
-            default:
-                super.terrorizeTown()
-                town?.changePopulation(by: zombieTerrorPower)
+                default:
+                    super.terrorizeTown()
+                    town?.changePopulation(by: zombieTerrorPower)
+                }
             }
+            town?.isMonsterAttacking = false
         }
-        town?.isMonsterAttacking = false
     }
 }
