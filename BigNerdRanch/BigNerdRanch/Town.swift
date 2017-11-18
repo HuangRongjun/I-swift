@@ -10,9 +10,13 @@ import Foundation
 
 struct Town {
     static let region = "South"
+    var mayor = Mayor()
     var population =         5_422 {
         didSet(oldPopulation){
-            print("The population has changed to \(population) form \(oldPopulation)")
+            if oldPopulation > population {
+                print("The population has changed to \(population) form \(oldPopulation)")
+                mayor.offerCondolences()
+            }
         }
     }
     var numberOfStoplights = 4
