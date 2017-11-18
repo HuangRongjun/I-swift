@@ -11,11 +11,12 @@ import Foundation
 struct Town {
     static let region = "South"
     var mayor = Mayor()
+    var attackType: AttackType = .monster
     var population =         5_422 {
         didSet(oldPopulation){
             if oldPopulation > population {
                 print("The population has changed to \(population) form \(oldPopulation)")
-                mayor.offerCondolences()
+                mayor.offerCondolences(forMonsterAttackType: attackType)
             }
         }
     }
@@ -26,6 +27,12 @@ struct Town {
         case samll
         case medium
         case large
+    }
+    
+    enum AttackType {
+        case monster
+        case zombie
+        case vampie
     }
     
 //    lazy var townSize: Size = {

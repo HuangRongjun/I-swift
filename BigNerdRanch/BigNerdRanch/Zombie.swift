@@ -34,7 +34,7 @@ class Zombie: Monster {
                 default:
                     super.terrorizeTown()
                     town?.changePopulation(by: zombieTerrorPower)
-                    mayor.anxious()
+                    town?.attackType = .zombie
                 }
             }
             town?.isMonsterAttacking = false

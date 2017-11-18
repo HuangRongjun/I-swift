@@ -23,6 +23,7 @@ class Vampire: Monster {
             default:
                 super.terrorizeTown()
                 town?.changePopulation(by: vampireTerrorPower)
+                town?.attackType = .vampie
                 currentVampires.append(Vampire())
                 printVampireCount()
             }
