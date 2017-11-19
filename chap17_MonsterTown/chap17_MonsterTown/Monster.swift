@@ -25,7 +25,10 @@ class Monster {
         }
     }
     
-    required init(town: Town?, monsterName name: String) {
+    required init?(town: Town?, monsterName name: String) {
+        guard name.characters.count > 0 else {
+            return nil
+        }
         self.town = town
         self.name = name
     }
