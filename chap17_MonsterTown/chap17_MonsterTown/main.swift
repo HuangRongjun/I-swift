@@ -11,11 +11,11 @@ import Foundation
 var myTown = Town(region: "West", population: 10_000, stoplights: 16)
 myTown = Town(population: 10_000, stoplights: 16)
 
-let myTownSize = myTown.townSize
-print(myTownSize)
+let myTownSize = myTown?.townSize
+print(myTownSize ?? 0)
 
-myTown.changePopulation(by: 1_000_000)
-print("Size: \(myTown.townSize); population: \(myTown.population)")
+myTown?.changePopulation(by: 1_000_000)
+print("Size: \(myTown?.townSize ?? Town.Size.small); population: \(myTown?.population ?? 0)")
 
 var fredTheZombie: Zombie? = Zombie(limp: false, fallingApart: false, town: myTown, monsterName: "Fred")
 fredTheZombie?.town = myTown
