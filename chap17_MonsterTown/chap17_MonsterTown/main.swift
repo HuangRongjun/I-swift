@@ -17,16 +17,21 @@ print(myTownSize)
 myTown.changePopulation(by: 1_000_000)
 print("Size: \(myTown.townSize); population: \(myTown.population)")
 
-let fredTheZombie = Zombie()
-fredTheZombie.town = myTown
-fredTheZombie.terrorizeTown()
-fredTheZombie.town?.printDescription()
+var fredTheZombie: Zombie? = Zombie(limp: false, fallingApart: false, town: myTown, monsterName: "Fred")
+fredTheZombie?.town = myTown
+fredTheZombie?.terrorizeTown()
+fredTheZombie?.town?.printDescription()
 
-print("Victim pool: \(fredTheZombie.victimPool)")
-fredTheZombie.victimPool = 500
-print("Victim pool: \(fredTheZombie.victimPool)")
+print("Victim pool: \(fredTheZombie?.victimPool ?? 0)")
+fredTheZombie?.victimPool = 500
+print("Victim pool: \(fredTheZombie?.victimPool ?? 0)")
 
 print(Zombie.spookyNoise)
+
 if Zombie.isTerrifying {
     print("Run away!")
 }
+
+fredTheZombie = nil
+
+var convenientZombie = Zombie(limp: true, fallingApart: false)
